@@ -41,9 +41,9 @@ export default function Index() {
   return (
     <div style={{ backgroundColor: colors.background, color: colors.text }}>
       {/* Hero Section */}
-      <section className={`${utils.containerClass} py-12 md:py-16`}>
+      <section className={`${utils.containerClass} py-4 md:py-8`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-4 animate-fade-in">
+          <div className="space-y-2 animate-fade-in">
             <div className="space-y-3">
               <h1
                 className="font-bold leading-tight"
@@ -172,10 +172,10 @@ export default function Index() {
       </section>
 
       {/* Skills Section */}
-      <section className={`py-12 md:py-16`} style={{ backgroundColor: colors.surface }}>
+      <section className={`py-4 md:py-8`} style={{ backgroundColor: colors.surface }}>
         <div className={utils.containerClass}>
           <h2
-            className="text-center mb-12 font-bold"
+            className="text-center mb-6 font-bold"
             style={{ fontSize: "20px", color: colors.text }}
           >
             What I Do
@@ -186,7 +186,7 @@ export default function Index() {
               return (
                 <div
                   key={index}
-                  className="p-6 rounded-xl border transition-all duration-300 hover:shadow-md animate-fade-in-up"
+                  className="p-2 flex gap-2 rounded-xl border items-center transition-all duration-300 hover:shadow-md animate-fade-in-up"
                   style={{
                     backgroundColor: colors.surface,
                     borderColor: colors.primaryLight,
@@ -194,9 +194,11 @@ export default function Index() {
                   } as React.CSSProperties}
                 >
                   <Icon
-                    className="w-10 h-10 mb-3"
+                    className="w-10 h-10 "
                     style={{ color: colors.primary }}
                   />
+                  <div className="">
+
                   <h3
                     className="font-bold text-sm mb-1"
                     style={{ color: colors.text }}
@@ -206,6 +208,7 @@ export default function Index() {
                   <p style={{ fontSize: "13px", color: colors.textLight }}>
                     {skill.desc}
                   </p>
+                  </div>
                 </div>
               );
             })}
@@ -214,8 +217,8 @@ export default function Index() {
       </section>
 
       {/* Featured Projects */}
-      <section className={`${utils.containerClass} py-12 md:py-16`}>
-        <div className="space-y-8">
+      <section className={`${utils.containerClass} py-4 md:py-8`}>
+        <div className="space-y-4">
           <div className="text-center space-y-2">
             <h2
               className="font-bold"
@@ -230,7 +233,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {featuredProjects.map((project, index) => (
               <div
                 key={index}
@@ -280,7 +283,7 @@ export default function Index() {
             ))}
           </div>
 
-          <div className="text-center pt-4">
+          <div className="text-center pt-2">
             <Link
               to="/portfolio"
               className="inline-flex items-center gap-2 px-6 py-2 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-300 group text-sm"
@@ -295,7 +298,7 @@ export default function Index() {
 
       {/* CTA Section */}
       <section
-        className="py-12 md:py-16"
+        className="py-5 md:py-8"
         style={{
           background: `linear-gradient(135deg, ${colors.primary}, ${colors.primaryDark})`,
         }}
@@ -335,17 +338,17 @@ export default function Index() {
 
       {/* Footer */}
       <footer
-        className="py-8"
-        style={{ backgroundColor: "#1a1a1a", color: "#999999" }}
+        className="py-2"
+        style={{background:'#eee'}}
       >
         <div className={`${utils.containerClass}`}>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div>
-              <h3 className="font-bold text-white text-sm mb-2">Aswin Kumar</h3>
+              <h3 className="font-bold text-black text-sm mb-2">Aswin Kumar</h3>
               <p className="text-xs">Frontend Developer</p>
             </div>
             <div>
-              <h4 className="font-semibold text-white text-xs mb-2">Quick Links</h4>
+              <h4 className="font-semibold text-black text-xs mb-2">Quick Links</h4>
               <ul className="space-y-1 text-xs">
                 <li>
                   <Link to="/" className="hover:text-white transition-colors">
@@ -370,7 +373,7 @@ export default function Index() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white text-xs mb-2">Connect</h4>
+              <h4 className="font-semibold text-black text-xs mb-2">Connect</h4>
               <ul className="space-y-1 text-xs">
                 <li>
                   <a
@@ -395,7 +398,7 @@ export default function Index() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white text-xs mb-2">Contact</h4>
+              <h4 className="font-semibold text-black text-xs mb-2">Contact</h4>
               <ul className="space-y-1 text-xs">
                 <li className="flex items-center gap-1">
                   <Mail size={12} />
@@ -415,12 +418,12 @@ export default function Index() {
               </ul>
             </div>
           </div>
-          <div
+          {/* <div
             className="text-center pt-6 border-t"
             style={{ borderColor: "#333333", fontSize: "12px" }}
           >
             <p>&copy; 2024 Aswin Kumar. All rights reserved.</p>
-          </div>
+          </div> */}
         </div>
       </footer>
     </div>

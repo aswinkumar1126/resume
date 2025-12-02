@@ -99,7 +99,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+    const initialTheme = "light";
     setThemeState(initialTheme);
     applyTheme(initialTheme);
     setIsMounted(true);
@@ -137,10 +137,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const value: ThemeContextType = {
+      ...defaultThemeContext,
     theme,
     setTheme,
     toggleTheme,
-    ...defaultThemeContext,
+  
     colors,
   };
 
