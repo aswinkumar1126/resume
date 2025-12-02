@@ -8,7 +8,7 @@ export default function About() {
     {
       title: "Frontend Developer",
       company: "BrighTechSoftware Solutions",
-      period: "2023–2024 (1 Year)",
+      period: "2024–2025 (1 Year)",
       description: [
         "Developed a full Jewellery E-Commerce Website, including user interface, cart, wishlist, order system & complete Admin Panel",
         "Built and enhanced a Smith Management System with complete CRUD: Daily income/outgoing tracking, Smith job assignments, Workflow Status",
@@ -61,8 +61,8 @@ export default function About() {
   return (
     <div style={{ backgroundColor: colors.background, color: colors.text }}>
       {/* Hero Section */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
-        <div className="text-center space-y-3 mb-8">
+      <section className={`${utils.containerClass} py-4 md:py-8`}>
+        <div className="text-center space-y-3 mb-4">
           <h1
             className="font-bold"
             style={{ fontSize: "20px", color: colors.text }}
@@ -83,7 +83,7 @@ export default function About() {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
           {[
             { label: "Years Experience", value: "1+" },
             { label: "Projects Completed", value: "5+" },
@@ -92,7 +92,7 @@ export default function About() {
           ].map((stat, index) => (
             <div
               key={index}
-              className="rounded-lg border p-4 text-center transition-all duration-300 hover:shadow-sm"
+              className="rounded-lg border p-2 text-center transition-all duration-300 hover:shadow-sm"
               style={{
                 backgroundColor: colors.surface,
                 borderColor: colors.border,
@@ -113,7 +113,7 @@ export default function About() {
       </section>
 
       {/* Profile Overview */}
-      <section className={`py-10 md:py-12`} style={{ backgroundColor: colors.surface }}>
+      <section className={`py-4 md:py-8`} style={{ backgroundColor: colors.surface }}>
         <div className={utils.containerClass}>
           <div className="flex items-start gap-6">
             <div
@@ -155,9 +155,9 @@ export default function About() {
       </section>
 
       {/* Experience */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
+      <section className={`${utils.containerClass} py-4 md:py-6`}>
         <h2
-          className="font-bold mb-6"
+          className="font-bold mb-2"
           style={{ fontSize: "18px", color: colors.text }}
         >
           Experience
@@ -168,7 +168,7 @@ export default function About() {
             return (
               <div
                 key={index}
-                className="rounded-xl border p-5 transition-all duration-300 hover:shadow-sm"
+                className="rounded-xl border p-3 transition-all duration-300 hover:shadow-sm"
                 style={{
                   backgroundColor: colors.surface,
                   borderColor: colors.border,
@@ -218,10 +218,10 @@ export default function About() {
       </section>
 
       {/* Skills */}
-      <section className={`py-10 md:py-12`} style={{ backgroundColor: colors.surface }}>
+      <section className={`py-4 md:py-8`} style={{ backgroundColor: colors.surface }}>
         <div className={utils.containerClass}>
           <h2
-            className="font-bold mb-6"
+            className="font-bold mb-2"
             style={{ fontSize: "18px", color: colors.text }}
           >
             Skills & Expertise
@@ -257,9 +257,9 @@ export default function About() {
       </section>
 
       {/* Education */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
+      <section className={`${utils.containerClass} py-4 md:py-6`}>
         <h2
-          className="font-bold mb-6"
+          className="font-bold mb-2"
           style={{ fontSize: "18px", color: colors.text }}
         >
           Education
@@ -301,10 +301,10 @@ export default function About() {
       </section>
 
       {/* Certifications */}
-      <section className={`py-10 md:py-12`} style={{ backgroundColor: colors.surface }}>
+      <section className={`py-4 md:py-6`} style={{ backgroundColor: colors.surface }}>
         <div className={utils.containerClass}>
           <h2
-            className="font-bold mb-6"
+            className="font-bold mb-2"
             style={{ fontSize: "18px", color: colors.text }}
           >
             Certifications & Learning
@@ -348,18 +348,18 @@ export default function About() {
       </section>
 
       {/* Languages */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
+      <section className={`${utils.containerClass} py-4 md:py-6`}>
         <h2
-          className="font-bold mb-6"
+          className="font-bold mb-2"
           style={{ fontSize: "18px", color: colors.text }}
         >
           Languages
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex  gap-4">
           {["English", "Tamil"].map((lang) => (
             <div
               key={lang}
-              className="rounded-lg border p-4 flex items-center justify-between transition-all duration-300 hover:shadow-sm"
+              className="rounded-lg border p-2 flex items-center justify-between transition-all duration-300 hover:shadow-sm"
               style={{
                 backgroundColor: colors.surface,
                 borderColor: colors.border,
@@ -368,14 +368,14 @@ export default function About() {
               <span style={{ fontSize: "14px", fontWeight: "500", color: colors.text }}>
                 {lang}
               </span>
-              <div className="w-24 h-2 rounded-full overflow-hidden" style={{ backgroundColor: colors.border }}>
+              {/* <div className="w-24 h-2 rounded-full overflow-hidden" style={{ backgroundColor: colors.border }}>
                 <div
                   className="h-full w-5/6"
                   style={{
                     background: `linear-gradient(90deg, ${colors.primary}, ${colors.primaryDark})`,
                   }}
                 />
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

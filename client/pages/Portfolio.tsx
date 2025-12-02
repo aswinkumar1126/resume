@@ -100,8 +100,8 @@ export default function Portfolio() {
   return (
     <div style={{ backgroundColor: colors.background, color: colors.text }}>
       {/* Hero Section */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
-        <div className="text-center space-y-3 mb-8">
+      <section className={`${utils.containerClass} py-4 md:py-6`}>
+        <div className="text-center space-y-3 mb-2">
           <h1
             className="font-bold"
             style={{ fontSize: "20px", color: colors.text }}
@@ -134,7 +134,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Grid */}
-      <section className={`${utils.containerClass} pb-10 md:pb-12`}>
+      <section className={`${utils.containerClass} pb-4 md:pb-6`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filteredProjects.map((project, index) => (
             <div
@@ -157,7 +157,7 @@ export default function Portfolio() {
               </div>
 
               {/* Project Content */}
-              <div className="p-4 space-y-3">
+              <div className="p-3 space-y-3">
                 {/* Header */}
                 <div className="space-y-1">
                   <div className="flex items-start justify-between gap-3">
@@ -242,10 +242,10 @@ export default function Portfolio() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className={`py-10 md:py-12`} style={{ backgroundColor: colors.surface }}>
+      <section className={`py-4 md:py-6`} style={{ backgroundColor: colors.surface }}>
         <div className={utils.containerClass}>
           <h2
-            className="text-center font-bold mb-8"
+            className="text-center font-bold mb-4"
             style={{ fontSize: "18px", color: colors.text }}
           >
             Technology Stack
@@ -308,7 +308,7 @@ export default function Portfolio() {
       </section>
 
       {/* Call to Action */}
-      <section className={`${utils.containerClass} py-10 md:py-12 text-center space-y-4`}>
+      <section className={`${utils.containerClass} py-4 md:py-6 text-center space-y-2`}>
         <h2
           className="font-bold"
           style={{ fontSize: "18px", color: colors.text }}

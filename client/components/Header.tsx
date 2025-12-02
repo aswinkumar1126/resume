@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +11,18 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/aswinkumar1126",
+      icon: Github,
+    },
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/in/aswin-kumar1126ash",
+      icon: Linkedin,
+    },
+  ];
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -65,7 +78,7 @@ export default function Header() {
 
         {/* Desktop CTA & Theme Toggle */}
         <div className="hidden md:flex items-center gap-3">
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="p-2 rounded-lg transition-colors duration-300"
             style={{ backgroundColor: colors.surface }}
@@ -76,16 +89,31 @@ export default function Header() {
             ) : (
               <Sun size={18} style={{ color: colors.primary }} />
             )}
-          </button>
-          <a
-            href="https://github.com/aswinkumar1126"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 text-white rounded-lg font-medium transition-opacity duration-300 hover:opacity-90 text-sm"
-            style={{ backgroundColor: colors.primary }}
-          >
-            GitHub
-          </a>
+          </button> */}
+          <div className="flex justify-center gap-4">
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full border transition-all duration-300 hover:shadow-md"
+                  style={{
+                    backgroundColor: colors.background,
+                    borderColor: colors.border,
+                    color: colors.primary,
+                  }}
+                  title={link.name}
+                >
+                  <Icon size={20} />
+                </a>
+              );
+            })}
+          </div>
+
+          
         </div>
 
         {/* Mobile Menu Button */}
@@ -116,7 +144,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="w-full py-2 px-3 rounded-lg font-medium text-sm flex items-center gap-2 transition-colors duration-300 mt-2"
               style={{ backgroundColor: colors.primary, color: colors.primaryLight }}
@@ -130,7 +158,7 @@ export default function Header() {
                   <Sun size={16} /> Light Mode
                 </>
               )}
-            </button>
+            </button> */}
             <a
               href="https://github.com/aswinkumar1126"
               target="_blank"

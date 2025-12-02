@@ -78,8 +78,8 @@ export default function Contact() {
   return (
     <div style={{ backgroundColor: colors.background, color: colors.text }}>
       {/* Hero Section */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
-        <div className="text-center space-y-3 mb-8">
+      <section className={`${utils.containerClass} py-3 md:py-6`}>
+        <div className="text-center space-y-3 mb-2">
           <h1
             className="font-bold"
             style={{ fontSize: "20px", color: colors.text }}
@@ -94,8 +94,8 @@ export default function Contact() {
       </section>
 
       {/* Contact Methods */}
-      <section className={`${utils.containerClass} pb-10 md:pb-12`}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <section className={`${utils.containerClass} pb-3 md:pb-6`}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {contactMethods.map((method, index) => {
             const Icon = method.icon;
             return (
@@ -127,16 +127,16 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className={`py-10 md:py-12`} style={{ backgroundColor: colors.surface }}>
-        <div className="max-w-2xl mx-auto px-4">
+      <section className={`py-3 md:py-6`} style={{ backgroundColor: colors.surface }}>
+        <div className="max-w-2xl mx-auto px-2">
           <h2
-            className="text-center font-bold mb-6"
+            className="text-center font-bold mb-2"
             style={{ fontSize: "18px", color: colors.text }}
           >
             Send me a message
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Name */}
               <div className="space-y-1">
@@ -152,7 +152,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full px-4 py-2 rounded-lg transition-all duration-300 text-sm"
+                  className="w-full px-4 py-2 rounded-sm transition-all duration-300 text-sm"
                   style={{
                     border: `1px solid ${colors.border}`,
                     backgroundColor: colors.background,
@@ -176,7 +176,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="john@example.com"
-                  className="w-full px-4 py-2 rounded-lg transition-all duration-300 text-sm"
+                  className="w-full px-4 py-2 rounded-sm transition-all duration-300 text-sm"
                   style={{
                     border: `1px solid ${colors.border}`,
                     backgroundColor: colors.background,
@@ -201,7 +201,7 @@ export default function Contact() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Project proposal"
-                className="w-full px-4 py-2 rounded-lg transition-all duration-300 text-sm"
+                className="w-full px-4 py-2 rounded-sm transition-all duration-300 text-sm"
                 style={{
                   border: `1px solid ${colors.border}`,
                   backgroundColor: colors.background,
@@ -225,7 +225,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Tell me about your project or inquiry..."
                 rows={4}
-                className="w-full px-4 py-2 rounded-lg transition-all duration-300 text-sm resize-none"
+                className="w-full px-4 py-2 rounded-sm transition-all duration-300 text-sm resize-none"
                 style={{
                   border: `1px solid ${colors.border}`,
                   backgroundColor: colors.background,
@@ -268,9 +268,9 @@ export default function Contact() {
       </section>
 
       {/* Social Links */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
+      <section className={`${utils.containerClass} py-3 md:py-6`}>
         <div
-          className="rounded-2xl border p-8 space-y-6"
+          className="rounded-2xl border p-4 space-y-2"
           style={{
             backgroundColor: colors.surface,
             borderColor: colors.primary,
@@ -363,9 +363,9 @@ export default function Contact() {
       </section>
 
       {/* Quick Facts */}
-      <section className={`${utils.containerClass} py-10 md:py-12`}>
+      <section className={`${utils.containerClass} py-2 md:py-4`}>
         <h2
-          className="text-center font-bold mb-6"
+          className="text-center font-bold mb-2"
           style={{ fontSize: "18px", color: colors.text }}
         >
           Why Work With Me?
@@ -410,34 +410,34 @@ export default function Contact() {
 
       {/* Response Time */}
       <section
-        className={`${utils.containerClass} py-10 md:py-12`}
+        className={`${utils.containerClass} py-2 md:py-4 text-white`}
         style={{
           background: `linear-gradient(135deg, ${colors.primary}, ${colors.primaryDark})`,
         }}
       >
-        <div className="text-center text-white space-y-3">
-          <h3 className="font-bold" style={{ fontSize: "16px" }}>
+        <div className="text-center text-white space-y-2">
+          <h3 className="font-bold text-white" style={{ fontSize: "16px" }}>
             Typical Response Time
           </h3>
-          <p style={{ fontSize: "13px" }}>
+          <p style={{ fontSize: "13px" }} className="text-white">
             I usually respond to messages within 24 hours. For urgent matters, feel free to
             call or message me directly.
           </p>
           <div className="flex justify-center gap-3 flex-wrap pt-2">
             <span
-              className="px-3 py-1 rounded-full text-xs"
+              className="px-3 py-1 rounded-full text-xs text-white" 
               style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
             >
               📧 Email: 24 hours
             </span>
             <span
-              className="px-3 py-1 rounded-full text-xs"
+              className="px-3 py-1 rounded-full text-xs text-white"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
             >
               📞 Phone: Same day
             </span>
             <span
-              className="px-3 py-1 rounded-full text-xs"
+              className="px-3 py-1 rounded-full text-xs text-white"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
             >
               💬 Message: A few hours
