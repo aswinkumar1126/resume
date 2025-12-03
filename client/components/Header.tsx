@@ -3,11 +3,12 @@ import { useState } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme, colors, utils } = useTheme();
-
+const location =useLocation()
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -60,20 +61,30 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className="relative font-medium transition-colors duration-300 group text-sm"
-              style={{ color: colors.text }}
-            >
-              {link.label}
-              <span
-                className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
-                style={{ backgroundColor: colors.primary }}
-              />
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.href;
+
+            return (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="relative font-medium transition-colors duration-300 group text-sm"
+                style={{
+                  color: isActive ? colors.primary : colors.text, // 👈 active color
+                  fontWeight: isActive ? "700" : "500",
+                }}
+              >
+                {link.label}
+
+                {/* underline animation */}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isActive ? "w-full" : "w-0"
+                    }`}
+                  style={{ backgroundColor: colors.primary }}
+                />
+              </Link>
+            );
+          })}
         </div>
 
         {/* Desktop CTA & Theme Toggle */}
